@@ -1,5 +1,10 @@
+// Globals
 @import 'variables';
 
+//Components
+@import 'components/buttons';
+
+// Sections
 @import 'sections/login';
 
 @import '../../node_modules/nativescript-theme-core/scss/light';

@@ -1,0 +1,21 @@
+.button {
+  padding: 20;
+  &--primary {
+    color: $white;
+    background: $primary-color;
+    border-radius: 10;
+  }
+  &--secondary {
+    border-width: 2;
+    border-color: $white;
+    color: $white;
+    border-radius: 10;
+  }
+}
+
+.button-group {
+  padding: 10;
+  .button {
+    margin-bottom: 10;
+  }
+}

@@ -1,0 +1,16 @@
+<FlexboxLayout flexDirection="column">
+    <FlexboxLayout flexGrow="6" justifyContent="center" flexDirection="column" alignContent="center">
+        <FlexboxLayout justifyContent="center">
+            <Image class="logo-head" src="~/images/Logo-head.png" stretch="none"></Image>
+        </FlexboxLayout>
+        <FlexboxLayout justifyContent="center">
+            <Image class="logo-body" src="~/images/Logo-body.png" stretch="none"></Image>
+        </FlexboxLayout>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="column" justifyContent="flex-end" flexGrow="1" class="button-group">
+        <Button class="button button--primary"
+                text="Login"
+                [nsRouterLink]="['/login', 'credentials']"></Button>
+        <Button class="button button--secondary" text="I don't have an account" (tap)="onTap($event)"></Button>
+    </FlexboxLayout>
+</FlexboxLayout>
