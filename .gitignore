@@ -4,3 +4,4 @@ node_modules/**/*
 platforms/**/*
 *.css
 app/**/*.js
+.DS_Store
