@@ -1,6 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-import { AppRoutingModule } from "./app.routing";
+import { appRouting } from "./app.routing";
 import { AppComponent } from "./app.component";
 
 import { ItemService } from "./item/item.service";
@@ -11,6 +11,7 @@ import { LoginMainComponent } from '~/login/login-main.component';
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { NativeScriptHttpModule } from "nativescript-angular/http";
+import { NativeScriptRouterModule } from 'nativescript-angular';
 
 @NgModule({
     bootstrap: [
@@ -20,7 +21,8 @@ import { NativeScriptHttpModule } from "nativescript-angular/http";
         NativeScriptModule,
         NativeScriptFormsModule,
         NativeScriptHttpModule,
-        AppRoutingModule
+        NativeScriptRouterModule,
+        appRouting
     ],
     declarations: [
         AppComponent,
@@ -35,7 +37,4 @@ import { NativeScriptHttpModule } from "nativescript-angular/http";
         NO_ERRORS_SCHEMA
     ]
 })
-/*
-Pass your application module to the bootstrapModule function located in main.ts to start your app
-*/
 export class AppModule { }
