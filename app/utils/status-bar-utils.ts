@@ -1,8 +1,8 @@
 
-import * as application from "application";
-import * as platform from "platform";
-import * as utils from "utils/utils";
-import { Page } from "ui/page";
+import * as application from 'application';
+import * as platform from 'platform';
+import * as utils from 'utils/utils';
+import { Page } from 'ui/page';
 
 declare var android: any;
 declare var UIResponder: any;
@@ -21,7 +21,7 @@ export function setStatusBarColors() {
                 return true;
             }
         }, {
-            name: "AppDelegate",
+            name: 'AppDelegate',
             protocols: [UIApplicationDelegate]
         });
         application.ios.delegate = AppDelegate;
@@ -31,8 +31,8 @@ export function setStatusBarColors() {
     // See http://bradmartin.net/2016/03/10/fullscreen-and-navigation-bar-color-in-a-nativescript-android-app/
     // for details on the technique used.
     if (application.android) {
-        application.android.on("activityStarted", function() {
-            if (application.android && platform.device.sdkVersion >= "21") {
+        application.android.on('activityStarted', function() {
+            if (application.android && platform.device.sdkVersion >= '21') {
                 let View = android.view.View;
                 let window = application.android.startActivity.getWindow();
                 window.setStatusBarColor(0x000000);
@@ -53,6 +53,6 @@ export function setStatusBarColors() {
 // See https://discourse.nativescript.org/t/translucent-status-bars-and-the-iphone-x-notch/2806
 export function handleIPhoneX(page: Page) {
     if (platform.isIOS && platform.screen.mainScreen.heightPixels == 2436 && platform.screen.mainScreen.widthPixels == 1125) {
-        page.className = page.className + " iphonex";
+        page.className = page.className + ' iphonex';
     }
 }

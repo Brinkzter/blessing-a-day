@@ -1,20 +1,16 @@
-import { ModuleWithProviders, NgModule } from "@angular/core";
-import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { Routes } from "@angular/router";
-
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
-import { LoginMainComponent } from '~/login/login-main.component';
+import { ModuleWithProviders } from '@angular/core';
+import { NativeScriptRouterModule } from 'nativescript-angular/router';
+import { Routes } from '@angular/router';
 
 const appRoutes: Routes = [
     {
-        path: "",
-        redirectTo: "/login",
-        pathMatch: "full"
+        path: '',
+        redirectTo: '/login',
+        pathMatch: 'full'
     },
     {
         path: 'login',
-        component: LoginMainComponent
+        loadChildren: './login/login.module#LoginModule'
     }
 ];
 

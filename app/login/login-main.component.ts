@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Page } from 'tns-core-modules/ui/page';
-import { handleIPhoneX, setStatusBarColors } from '~/utils/status-bar-utils';
+import { handleIPhoneX } from '~/utils/status-bar-utils';
 
 @Component({
     selector: 'bad-login-main',
